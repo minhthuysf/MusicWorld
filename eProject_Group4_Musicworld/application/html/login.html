@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>Login</title>
+	 <meta charset="UTF-8"/>
+	 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	 <link rel="icon" type="image/ico" href="../graphic/logomw.jpg"/>
+	 <style>
+	  section{
+		  background-image:url("../graphic/jiyeonlg1.jpg");
+		  width:100%;
+		  background-attachment:fixed;		 
+          background-repeat: no-repeat;
+          background-size: cover;
+		  background-position:center;
+       
+		  
+		
+		}
+		.active{
+	     background:#33CC33!important;
+	     }
+       .navbar li a{
+	      color:white !important;
+	      font-size:100%! important;
+           }
+        .navbar li a:hover{
+	     background:#33CC33!important;
+         }
+        .navbar-brand{
+         	margin-left:3%;
+         	margin-top:1%;
+          }
+        .dropdown-menu{
+	     background:black!important;
+	     color:white !important;
+         }
+           footer{
+         	background-color:black;
+	        max-width:100%;
+	         height:25%;
+	        color:white;
+          }
+	      .login{
+		     width:60%;
+			 background:rgba(240,255,255,0.5);
+		     margin:10% 0 5% 20%;
+		  }
+		  .col-lg-12 input{
+		   border:none;
+		   border-bottom: 1px solid black;
+		   background:transparent;
+		   transition:border 0.5s;
+		   outline:none;
+		   color:black;
+	     }
+		  label{
+		  color:#000;
+		  font-size:100%;
+		  margin-top:2%;
+		 
+		 }
+	     .error{
+		   color:red;
+		 }
+	 
+	 
+	 </style>
+	 <script type="text/javascript">
+	     function Mylogin()
+		 {
+		  var f = document.login;
+		  if(f.username.value =="")
+		  {
+		      document.getElementById("username-error").innerHTML="Please enter username";
+			  f.username.focus();
+			  return false;
+		  }
+		  else{
+		      document.getElementById("username-error").innerHTML="";
+		  }
+		  if(f.password.login =="" || f.password.value.length < 8)
+		  {
+		     document.getElementById("password-error").innerHTML="Please enter password length must be form 8 to 20 characters";
+		     f.password.focus();
+			 return false;
+		  }
+		  else{
+		     document.getElementById("password-error").innerHTML="";
+		  }
+		  alert("You logged in successfully");
+		   return true;
+		 }
+	 
+	 
+	 
+	 </script>
+	 
+	 </head>
+<body>
+     <nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
+	    <div class="container">
+           	<a class="navbar-brand" href="home.html">
+			   <img src="../graphic/logowebsite.jpg" height="45">
+			</a>	
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+			   <span class="navbar-toggler-icon"></span>	   
+			</button>
+		    <div class="collapse navbar-collapse" id="navbarResponsive">
+			    <ul class="navbar-nav mx-auto">
+				   <li class="nav-item">
+				       <a class="nav-link " href="home.html">Home</a>
+				   </li>
+				   <li class="nav-item">
+				       <a class="nav-link" href="newrelease.html">New Release</a>
+				   </li>
+				   <li class="nav-item dropdown">
+				       <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Category</a>
+				       <div class="dropdown-menu">
+					      <a class="dropdown-item" href="jazz.html">Jazz</a>
+						  <a class="dropdown-item" href="rock.html">Rock</a>
+						  <a class="dropdown-item" href="pop.html">Pop</a>
+						  <a class="dropdown-item" href="rap.html">Rap</a>
+					      <a class="dropdown-item" href="classical.html">Classical</a>
+					   </div> 
+				   </li>
+				   <li class="nav-item dropdown">
+				       <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Album</a>
+				       <div class="dropdown-menu">
+					       <a class="dropdown-item" href="albumjazz.html">Jazz</a>
+						  <a class="dropdown-item" href="albumrock.html">Rock</a>
+						  <a class="dropdown-item" href="albumpop.html">Pop</a>
+						  <a class="dropdown-item" href="albumrap.html">Rap</a>
+					      <a class="dropdown-item" href="albumclassical.html">Classical</a>
+						</div>
+				   </li>
+				   <li class="nav-item">
+				       <a class="nav-link" href="artist.html">Artist</a>
+				   </li>
+				   <li class="nav-item">
+				       <a class="nav-link active" href="login.html">Login</a>
+				   </li>
+				   <li class="nav-item">
+				       <a class="nav-link " href="signup.html">Sign Up</a>
+				   </li>
+			       
+				</ul>
+				<form class="form-inline" id="btn-search">
+				    <input type="text" placeholder="Search for artist, album...." width="300">
+				    <button><i class="fa fa-search"></i></button>
+				   </form>
+			</div>	
+		</div>	 
+	 </nav>
+	<section>
+	            <div class="container">
+				  
+				   <div class="row">
+				   <form class="login" onsubmit="return Mylogin();" name="login" action="home.html" method="post">
+				      <div class="col-lg-12">
+				        <h2 style="margin-left:40%;margin-top:5%;">Login</h2>
+					  </div>
+				        <div class="col-lg-12">
+					      <label for="username">Username*</label>
+					   </div>
+				   				   
+				       <div class="col-lg-12">
+					      <input type="text" id="username" name="username" placeholder="Enter your username" style="width:100%"/>
+	   				   </div>
+					   <div class="col-lg-12">
+					       <span class="error" id="username-error"></span>					   
+					   </div>
+					   <div class="col-lg-12">
+					      <label for="username">Password*</label>
+					   </div>
+				   				   
+				       <div class="col-lg-12">
+					      <input type="password" id="password" name="password" placeholder="Enter your password" style="width:100%"/>
+	   				   </div>
+					   <div class="col-lg-12">
+					       <span class="error" id="password-error"></span>					   
+					   </div>
+				       <div class="col-lg-12">
+					        <button style="background:#33CC33;margin-left:40%;margin-bottom:2%;margin-top:5%;">Login</button>
+					   </div>
+					   <div class="col-lg-12">	
+							<p style="margin-left:30%;font-size:100%;">Do you not have an account?<a href="signup.html">Sign up</a></p>
+					   </div>
+				   </form>
+				   </div>
+				
+				
+				
+				</div>
+	</section>
+	<footer>
+	   <div class="container">
+	      <div class="col-md-12" style="border-bottom: 1px solid white">
+		    <a href="home.html"> <img src="../graphic/logowebsite.jpg" style="width:20%;height20%;margin:3% 0 0 20%;"/></a>
+		     <a href="https://aptech.cusc.vn/"> <img src="../graphic/cusc_logo.jpg" style="width:8%;height:3%;margin:3% 0 0 10%"/></a>
+		     <img src="../graphic/logo_aptech.jpg" style="width:10%;height:10%;margin:3% 0 0 6%;"/>
+		  </div>
+	      <div class="container">
+		     <div class="row">
+			    <div class="col-md-4">
+			      <h4 style="color:#33CC33;margin-top:6%;cursor:pointer;">Contact Us</h4>
+				  <p><span style="color:#33CC33;cursor:pointer;">Address: </span> 01 Ly Tu Trong,Ninh Kieu, Can Tho</p>
+				  <p><span style="color:#33CC33;cursor:pointer;">Fax:</span> +84 292 373 1071</p>
+				  <p><span style="color:#33CC33;cursor:pointer;">Email:</span> cusc@ctu.edu.vn</p>
+				  <p><span style="color:#33CC33;cursor:pointer;">Phone:</span> +84 292 383 5581</p>
+				  <a href="feedback.html"><span style="color:#33CC33;cursor:pointer;">Send Feedback</span></a>
+				</div>
+				<div class="col-md-4" >
+		           <h4 style="color:#33CC33;margin-top:6%;cursor:pointer;">About</h4>
+			       <p> <span style="color:#33CC33;cursor:pointer;">Musicworld</span> is website listening to music online ,
+				   the user can search for all the information about  songs, album, artists.</p>
+			    </div>
+			    <div class="col-md-4" >
+			       <h4 style="color:#33CC33;margin-top:6%;cursor:pointer;">Location</h4>
+				   <div>
+			     	   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.793980200053!2d105.77768181370635!3d10.033852675206163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0881fa301aa5d%3A0x27e73181695218ab!2sCUSC!5e0!3m2!1sen!2s!4v1584779427419!5m2!1sen!2s" width="400" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+			       </div>
+			   </div>
+			
+			 
+			 </div>
+		  
+		  </div>
+		 
+	   </div>
+
+	   
+	</footer>
+</body>
+</html>

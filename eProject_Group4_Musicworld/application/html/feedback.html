@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>Send Feedback</title>
+	 <meta charset="UTF-8"/>
+	 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	 <link rel="icon" type="image/ico" href="../graphic/logomw.jpg"/>
+	 <link rel="stylesheet" href="../css/style2.css">
+	 <style>
+	   .send-feedback{
+	     margin-left:20%;
+		
+	   }
+	   input{
+	      width:80%;
+		 
+	   }
+	   #message{
+	     height:150px;
+		 width:80%;
+	   }
+	   label{
+	     margin-top:-6%;
+	   
+	   }
+	   .error{
+	    color:red;
+	   }
+	 </style>
+	 <script type="text/javascript">
+
+	   function Myfeedback()
+	   {
+	    var myemail = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+	    var f = document.feedback;
+		if(f.yourname.value == "" )
+		{
+		 document.getElementById("name-error").innerHTML="Please enter your name";
+		  f.yourname.focus();
+		  return false;
+		}
+		else{
+		 document.getElementById("name-error").innerHTML="";
+		 }
+		 if( myemail.test(f.email.value)==false)
+		 {
+		    document.getElementById("email-error").innerHTML="Invalid email address";
+		   f.email.focus();
+		   return false;
+         }
+		 else{
+		 document.getElementById("email-error").innerHTML="";
+		 }
+		if(f.subject.value == "")
+		 {
+		   document.getElementById("subject-error").innerHTML="Please enter your subject";
+		   f.subject.focus();
+		   return false;
+		 }
+		 else{
+		 document.getElementById("subject-error").innerHTML="";
+		 }
+		if(f.message.value == "")
+		 {
+		   document.getElementById("message-error").innerHTML="Please enter your message";
+		   f.message.focus();
+		   return false;
+		 }
+		 else{
+		 document.getElementById("message-error").innerHTML="";
+		 }
+		alert("Thanks you for submitting your feedback");
+		return true;
+	   
+	   }
+	   
+	   
+	 
+	 
+	 </script>
+	 
+</head>
+<body>
+     <nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
+	    <div class="container">
+           	<a class="navbar-brand" href="home.html">
+			   <img src="../graphic/logowebsite.jpg" height="45">
+			</a>	
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+			   <span class="navbar-toggler-icon"></span>	   
+			</button>
+		    <div class="collapse navbar-collapse" id="navbarResponsive">
+			    <ul class="navbar-nav mx-auto">
+				   <li class="nav-item">
+				       <a class="nav-link " href="application.html">Home</a>
+				   </li>
+				   <li class="nav-item">
+				       <a class="nav-link" href="newrelease.html">New Release</a>
+				   </li>
+				   <li class="nav-item dropdown">
+				       <a class="nav-link  dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Category</a>
+				       <div class="dropdown-menu">
+					      <a class="dropdown-item" href="jazz.html">Jazz</a>
+						  <a class="dropdown-item" href="rock.html">Rock</a>
+						  <a class="dropdown-item" href="pop.html">Pop</a>
+						  <a class="dropdown-item" href="rap.html">Rap</a>
+					      <a class="dropdown-item" href="classical.html">Classical</a>
+					   </div> 
+				   </li>
+				   <li class="nav-item dropdown">
+				       <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Album</a>
+				       <div class="dropdown-menu">
+					      <a class="dropdown-item" href="albumjazz.html">Jazz</a>
+						  <a class="dropdown-item" href="albumrock.html">Rock</a>
+						  <a class="dropdown-item" href="albumpop.html">Pop</a>
+						  <a class="dropdown-item" href="albumrap.html">Rap</a>
+					      <a class="dropdown-item" href="albumclassical.html">Classical</a>
+					   </div> 
+				   </li>
+				   <li class="nav-item">
+				       <a class="nav-link" href="artist.html">Artist</a>
+				   </li>
+				   <li class="nav-item">
+				       <a class="nav-link" href="login.html">Login</a>
+				   </li>
+				   <li class="nav-item">
+				       <a class="nav-link" href="signup.html">Sign Up</a>
+				   </li>
+			       
+				</ul>
+				<form class="form-inline" id="btn-search">
+				    <input type="text" placeholder="Search for artist, album...." width="300">
+				    <button><i class="fa fa-search"></i></button>
+				   </form>
+			</div>	
+		</div>	 
+	 </nav>
+	 
+	  <section style="height:600px">
+	        <form name="feedback" onsubmit="return Myfeedback();" method="post" action="home.html" class="send-feedback">
+			  <center>
+			    <table>
+				   <h3 style="color:#33CC33;padding-top:3%;margin-left:-15%;">Feedback</h3>
+				     <tr>
+					     <td><h6><label for="name" >Your Name <span style="color:red">*</span></label></h6></td>
+					 </tr>
+					 <tr>
+					     <td><input type="text" placeholder="Enter Your Name" id="name" name="yourname" size="100"></td>
+
+					</tr>
+					<tr>
+					      <td><span class="error" id="name-error"></span></td>
+					</tr>
+					 
+					  <tr>
+					     <td><h6><label for="email">Email <span style="color:red">*</span></label></h6></td>
+					 </tr>
+					 <tr>
+					     <td><input type="email" placeholder="Enter Your Email" id="email" name="email"></td>
+					 </tr>
+					 <tr>
+					      <td><span class="error" id="email-error"></span></td>
+					 </tr>
+					  <tr>
+					     <td><h6><label for="subject">Subject <span style="color:red">*</span></label></h6></td>
+					 </tr>
+					 <tr>
+					     <td><input type="text" placeholder="Enter Your Subject" id="subject"name="subject"></td>
+					 </tr>
+					 <tr>
+					      <td><span class="error" id="subject-error"></span></td>
+					 </tr>
+					  <tr>
+					     <td><h6><label for="message">Message <span style="color:red">*</span></label></h6></td>
+					 </tr>
+					 <tr>
+					     <td><textarea placeholder="Enter Your Message" id="message" name="message"></textarea></td>
+					 </tr>
+					 <tr>
+					      <td><span class="error" id="message-error"></span></td>
+					 </tr>
+				     <tr>
+					      <td><button style="background:#33CC33;margin-left:35%;margin-top:1%;" type="submit"> Send</button></td>
+					 </tr>
+				
+				
+				
+				</table>
+				</center>
+			</form>
+	  </section>
+	
+	<footer>
+	   <div class="container">
+	      <div class="col-lg-12" style="border-bottom: 1px solid white">
+		    <a href="home.html"> <img src="../graphic/logowebsite.jpg" style="width:20%;height20%;margin:3% 0 0 20%;"/></a>
+		      <a href="https://aptech.cusc.vn/"><img src="../graphic/cusc_logo.jpg" style="width:8%;height:3%;margin:3% 0 0 10%"/></a>
+		     <img src="../graphic/logo_aptech.jpg" style="width:10%;height:10%;margin:3% 0 0 6%;"/>
+		  </div>
+	      <div class="container">
+		     <div class="row">
+			    <div class="col-md-4">
+			      <h4 style="color:#33CC33;margin-top:6%;cursor:pointer;">Contact Us</h4>
+				  <p><span style="color:#33CC33;cursor:pointer;">Address: </span> 01 Ly Tu Trong,Ninh Kieu, Can Tho</p>
+				  <p><span style="color:#33CC33;cursor:pointer;">Fax:</span> +84 292 373 1071</p>
+				  <p><span style="color:#33CC33;cursor:pointer;">Email:</span> cusc@ctu.edu.vn</p>
+				  <p><span style="color:#33CC33;cursor:pointer;">Phone:</span> +84 292 383 5581</p>
+				  <a href="feedback.html"><span style="color:#33CC33;cursor:pointer;">Send Feedback</span></a>
+				</div>
+				<div class="col-md-4" >
+		           <h4 style="color:#33CC33;margin-top:6%;cursor:pointer;">About</h4>
+			       <p> <span style="color:#33CC33;cursor:pointer;">Musicworld</span> is website listening to music online ,
+				   the user can search for all the information about  songs, album, artists.</p>
+			    </div>
+			    <div class="col-md-4" >
+			       <h4 style="color:#33CC33;margin-top:6%;cursor:pointer;">Location</h4>
+				    <div>
+			     	   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.793980200053!2d105.77768181370635!3d10.033852675206163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0881fa301aa5d%3A0x27e73181695218ab!2sCUSC!5e0!3m2!1sen!2s!4v1584779427419!5m2!1sen!2s" width="400" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+			       </div>
+			    </div>
+			
+			 
+			 </div>
+		  
+		  </div>
+		 
+	   </div>
+
+	 </footer>
+	 </html>
+	 

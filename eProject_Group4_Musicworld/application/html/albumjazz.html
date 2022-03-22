@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>Album Of Music</title>
+	 <meta charset="UTF-8"/>
+	 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	 <link rel="icon" type="image/ico" href="../graphic/logomw.jpg"/>
+	 <link rel="stylesheet" href="../css/style2.css">
+	 <script type="text/javascript" src="../js/rating.js" ></script>
+	<style>
+  #playlist{
+     margin-top:0%;
+	margin-left:10%;
+  }
+  #playlist li a{
+     color:black;
+	 text-decoration:none;
+  }
+  #playlist .current-song a{
+      color:#33CC33;
+  }
+  #audioPlayer{
+  margin-top:0%;
+  margin-left:10%;
+  }
+  .checked{
+    color:yellow;
+  }
+  
+  
+  </style>
+	 
+</head>
+<body>
+     <nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
+	    <div class="container">
+           	<a class="navbar-brand" href="home.html">
+			   <img src="../graphic/logowebsite.jpg" height="45">
+			</a>	
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+			   <span class="navbar-toggler-icon"></span>	   
+			</button>
+		    <div class="collapse navbar-collapse" id="navbarResponsive">
+			    <ul class="navbar-nav mx-auto">
+				   <li class="nav-item">
+				       <a class="nav-link" href="home.html">Home</a>
+				   </li>
+				   <li class="nav-item">
+				       <a class="nav-link" href="newrelease.html">New Release</a>
+				   </li>
+				   <li class="nav-item dropdown">
+				       <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Category</a>
+				       <div class="dropdown-menu">
+					      <a class="dropdown-item" href="jazz.html">Jazz</a>
+						  <a class="dropdown-item" href="rock.html">Rock</a>
+						  <a class="dropdown-item" href="pop.html">Pop</a>
+						  <a class="dropdown-item" href="rap.html">Rap</a>
+					      <a class="dropdown-item" href="classical.html">Classical</a>
+					   </div> 
+				   </li>
+				   <li class="nav-item dropdown active">
+				       <a class="nav-link dropdown-toggle " href="#" id="navbardrop" data-toggle="dropdown">Album</a>
+				       <div class="dropdown-menu">
+					      <a class="dropdown-item" href="albumjazz.html">Jazz</a>
+						  <a class="dropdown-item" href="albumrock.html">Rock</a>
+						  <a class="dropdown-item" href="albumpop.html">Pop</a>
+						  <a class="dropdown-item" href="albumrap.html">Rap</a>
+					      <a class="dropdown-item" href="albumclassical.html">Classical</a>
+					   </div> 
+				   </li>
+				   <li class="nav-item">
+				       <a class="nav-link" href="artist.html">Artist</a>
+				   </li>
+				   <li class="nav-item">
+				       <a class="nav-link" href="login.html">Login</a>
+				   </li>
+				   <li class="nav-item">
+				       <a class="nav-link" href="signup.html">Sign Up</a>
+				   </li>
+			       
+				</ul>
+				<form class="form-inline" id="btn-search">
+				    <input type="text" placeholder="Search for artist, album...." width="300">
+				    <button><i class="fa fa-search"></i></button>
+				   </form>
+			</div>	
+		</div>	 
+	 </nav>
+	 <section>
+	    
+		         <div class="container">
+				 <div class="col-lg-12">
+			    <p style="font-size:150%;color:#339900;text-shadow:-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black">Jazz music album</p>
+			</div>
+				  <div class="row ">
+				  <div class="col-lg-4" >
+			           <img src="../graphic/abkenynnyg.jpg" style="width:65%;height:75%;margin:2% 0 0 20%" >
+			           <button style="margin-left:38%;margin-top:-20%;font-size:70%;" data-toggle="collapse" data-target="#info31"><a  title="Click to view details album information">Album: Kenny G</a></button>
+			      </div>
+				   <div class="collapse" id="info31">   
+				     <h6>Artist: <span style="color:#33CC33">Kenny G</span></6>
+					 <h6>Genres:<span style="color:#33CC33">Jazz</span></h6>
+					 <p>
+					   Kenny G is the debut studio album by American jazz saxophonist Kenny G, released in 1982 by Arista Records. 
+					   It reached number 10 on the Billboard Jazz Albums chart.
+					 </p>
+				    
+					</div>
+			<div class="col-lg-8">
+			<audio src="" controls id="audioPlayer">	
+	        Sorry, your browser doesn't support html5!
+	        </audio>
+	        <ol id="playlist">  	            
+	            <li class="current-song"><a href="../audio/TheShuffle-KennyG_35tbf.mp3"> The Shuffle</a></li>
+	            <li><a href="../audio/TellMe-KennyG_35tbe.mp3">Tell Me</a></li>
+	           <li><a href="../audio/StopAndGo-KennyG_35tbh.mp3">Stop And Go</a></li>
+			   <li><a href="../audio/Innocence-KennyG_3yvw.mp3">Innocence</a></li>
+			   <li><a href="../audio/MercyMercyMercy-KennyG_35tbk.mp3">Mercy Mercy Mercy</a></li>
+			   <li><a href="../audio/ICantTellYouWhy-KennyG_35tbg.mp3">I Can't Tell You Why</a></li>
+			   <li><a href="../audio/HereWeAre-KennyG_35tbj.mp3"> Here We Are</a></li>
+			   <li><a href="../audio/FindAWay-KennyG_35tbd.mp3">Find Away</a></li>
+			   <li><a href="../audio/CrystalMountain-KennyG_35tbc.mp3">Crystal Mountain</a></li>
+			   <li><a href="../audio/ComeClose-KennyG_35tbb.mp3">Come Close</a></li>
+        	</ol>
+           	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	        <script src="../js/audioplayer.js"></script>
+	        <script>
+                audioPlayer();
+	  
+	        </script>
+ </div>
+					</div>					
+				</div>
+				</div>
+
+                      <div class="container">		     
+		      <div class="row text-center">
+			     <div class="col-md-12">
+			        <span style="font-size:150%;color:#339900;text-shadow:-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black">Your review about the album</span>
+			     </div>
+			     <div class="col-md-12">
+		              <span class="fa fa-star checked" onmouseover="starmark(this)" onclick=""starmark(this) id="1one" style="font-size:40px;cursor:pointer;"></span>
+					  <span class="fa fa-star checked" onmouseover="starmark(this)" onclick=""starmark(this) id="2one" style="font-size:40px;cursor:pointer;"></span>
+		              <span class="fa fa-star checked" onmouseover="starmark(this)" onclick=""starmark(this) id="3one" style="font-size:40px;cursor:pointer;"></span>
+			          <span class="fa fa-star checked" onmouseover="starmark(this)" onclick=""starmark(this) id="4one" style="font-size:40px;cursor:pointer;"></span>
+					  <span class="fa fa-star checked" onmouseover="starmark(this)" onclick=""starmark(this) id="5one" style="font-size:40px;cursor:pointer;"></span>
+			   </div>
+			   <div class="col-md-12">
+		              <textarea class="form-controls" rows="4" placeholder="Enter Your Review" style="width:45%;margin-top:2%;"></textarea>     
+			   </div>
+		       <div class="col-md-12">
+		             <button onclick="showRating()" class="btn-sub" style="margin-top:2%;margin-bottom:2%;background:#33CC33;">Submit</button>
+		       </div>
+		 
+		</div>
+	  </div> 
+	        
+	 
+	 </section>
+	 
+	 
+<footer>
+	   
+
+	   <footer>
+	   <div class="container">
+	      <div class="col-lg-12" style="border-bottom: 1px solid white">
+		    <a href="home.html"> <img src="../graphic/logowebsite.jpg" style="width:20%;height20%;margin:3% 0 0 20%;"/></a>
+		     <a href="https://aptech.cusc.vn/"> <img src="../graphic/cusc_logo.jpg" style="width:8%;height:3%;margin:3% 0 0 10%"/></a>
+		     <img src="../graphic/logo_aptech.jpg" style="width:10%;height:10%;margin:3% 0 0 6%;"/>
+		  </div>
+	      <div class="container">
+		     <div class="row">
+			    <div class="col-md-4">
+			      <h4 style="color:#33CC33;margin-top:6%;cursor:pointer;">Contact Us</h4>
+				  <p><span style="color:#33CC33;cursor:pointer;">Address: </span> 01 Ly Tu Trong,Ninh Kieu, Can Tho</p>
+				  <p><span style="color:#33CC33;cursor:pointer;">Fax:</span> +84 292 373 1071</p>
+				  <p><span style="color:#33CC33;cursor:pointer;">Email:</span> cusc@ctu.edu.vn</p>
+				  <p><span style="color:#33CC33;cursor:pointer;">Phone:</span> +84 292 383 5581</p>
+				  <a href="feedback.html"><span style="color:#33CC33;cursor:pointer;">Send Feedback</span></a>
+				</div>
+				<div class="col-md-4" >
+		           <h4 style="color:#33CC33;margin-top:6%;cursor:pointer;">About</h4>
+			       <p> <span style="color:#33CC33;cursor:pointer;">Musicworld</span> is website listening to music online ,
+				   the user can search for all the information about  songs, album, artists.</p>
+			    </div>
+			    <div class="col-md-4" >
+			       <h4 style="color:#33CC33;margin-top:6%;cursor:pointer;">Location</h4>
+				   <div>
+			     	   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.793980200053!2d105.77768181370635!3d10.033852675206163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0881fa301aa5d%3A0x27e73181695218ab!2sCUSC!5e0!3m2!1sen!2s!4v1584779427419!5m2!1sen!2s" width="400" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+			       </div>
+			    </div>
+			
+			 
+			 </div>
+		  
+		  </div>
+		 
+	   </div>
+
+	</footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
